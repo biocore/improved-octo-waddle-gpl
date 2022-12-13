@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 # Copyright (c) 2013--, BP development team.
 #
-# Distributed under the terms of the Modified BSD License.
+# Distributed under the terms of the GPL License.
 #
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
@@ -19,7 +19,7 @@ import numpy as np
 
 classes = """
     Development Status :: 4 - Beta
-    License :: OSI Approved :: BSD License
+    License :: OSI Approved :: GPL License
     Topic :: Scientific/Engineering
     Programming Language :: Python
     Programming Language :: Python :: 3.7
@@ -85,6 +85,8 @@ extensions = [Extension("bp._bp",
                         ["bp/_binary_tree" + ext], ),
               Extension("bp._insert",
                         ["bp/_insert" + ext], ),
+              Extension("bp._insert",
+                        ["bp/_insert" + ext], ),
               Extension("bp.GPL._insert",
                         ["bp/GPL/_insert" + ext], ),
               Extension("bp.tests.test_bp_cy",
@@ -106,7 +108,7 @@ if USE_CYTHON:
     extensions = cythonize(extensions)
 
 
-setup(name='iow',
+setup(name='iow-gpl',
       version=versioneer.get_version(),
       description='Balanced parentheses',
       author='Daniel McDonald',
